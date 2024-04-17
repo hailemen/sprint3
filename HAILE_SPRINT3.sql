@@ -99,9 +99,9 @@ FROM VistaMarketing;
 /* NIVEL 2. EJERCICIO 3: "Filtra la vista VistaMarketing per a mostrar només les companyies que tenen el seu país de residència en "Germany"*/
 
 
-	SELECT *
-    FROM VistaMarketing
-    WHERE Pais_Residencia = "Germany";
+SELECT *
+FROM VistaMarketing
+WHERE Pais_Residencia = "Germany";
 
 /* NIVEL 3. EJERCICIO 1: "La setmana vinent tindràs una nova reunió amb els gerents de màrqueting. Un company del teu equip 
 va realitzar modificacions en la base de dades, però no recorda com les va realitzar. Et demana que l'ajudis a deixar els 
