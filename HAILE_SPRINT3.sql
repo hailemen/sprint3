@@ -98,8 +98,8 @@ FROM VistaMarketing;
 
 /* NIVEL 2. EJERCICIO 3: "Filtra la vista VistaMarketing per a mostrar només les companyies que tenen el seu país de residència en "Germany"*/
 
-CREATE VIEW VistaMarketingGermany AS
-	SELECT Nombre_Compañia, Telefono_Contacto, Pais_Residencia, Mediana_Compra_Compañia
+
+	SELECT *
     FROM VistaMarketing
     WHERE Pais_Residencia = "Germany";
 
@@ -141,7 +141,7 @@ Nom de la companyia de la transacció realitzada.
 Assegura't d'incloure informació rellevant de totes dues taules i utilitza àlies per a canviar de nom columnes segons sigui necessari.
 Mostra els resultats de la vista, ordena els resultats de manera descendent en funció de la variable ID de transaction. */
 
-CREATE VIEW InformeTecnico AS
+#CREATE VIEW InformeTecnico AS
 SELECT
 transaction.id AS ID_Transaccion,
 CONCAT(user.name, " ", surname) AS Nombre_Usuario_a,
@@ -155,7 +155,6 @@ FROM transaction
 LEFT JOIN user ON transaction.user_id = user.id
 RIGHT JOIN credit_card ON transaction.credit_card_id = credit_card.id
 LEFT JOIN company ON transaction.company_id = company.id
-GROUP BY ID_Transaccion, Nombre_Usuario_a, IBAN_Tarjeta, Importe_Transaccion, Aprobacion, Nombre_Compañia, Pais_Compañia, Importe_Transaccion
 ORDER BY ID_Transaccion DESC;
 
 # Para comprobar el resultado
